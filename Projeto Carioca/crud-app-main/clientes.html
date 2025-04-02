@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="clientes.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body onload="fetchClientes()">
+    <!--MODAL MENU-->
+    <div class="screen-wrapper" id="screen-wrapper">
+        <div class="modal-wrapper">
+            <h1>Adicionar Cliente</h1>
+            <text class="modal-desc">Preencha as informações e clique em Adicionar</text>
+            <div class="form-wrapper">
+                <form>
+                    <label for="cpf">CPF</label><br>
+                    <input type="text" name="cpf" placeholder="000.000.000-00"><br>
+
+                    <label for="name">Name</label><br>
+                    <input type="text" name="name" placeholder="Gustavo"><br>
+
+                    <label for="email">Email</label><br>
+                    <input type="text" name="email" placeholder="gustavo@email.com"><br>
+
+                    <label for="tel">Telefone</label><br>
+                    <input type="text" name="tel" placeholder="(11) 99999-9999"><br>
+
+                    <button type="submit" id="addClientButton">Adicionar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--NAVBAR-->
+    <nav>
+        <ul>
+            <a class="nav-link nav-active" href="#">Clientes</a>
+            <text class="nav-divider">/</text>
+            <a class="nav-link" href="materiais.html">Materiais</a>
+            <text class="nav-divider">/</text>
+            <a class="nav-link" href="projeto.html">Projetos</a>
+            <text class="nav-divider">/</text>
+            <a class="nav-link" href="itemprojeto.html">Item Projeto</a>
+        </ul>
+    </nav>
+
+    <!--PAGE CONTENT-->
+    <div class="content-wrapper">
+        <div class="btn-wrapper">
+            <button class="btn-add" id="openModalButton">Adicionar<span><i class="fa-solid fa-plus"
+                        style="color: #fafafa;"></i></span></button>
+            <button class="btn-refresh" id="btn-refresh">Atualizar <span><i class="fa-solid fa-arrows-rotate"
+                        style="color: #fafafa;"></i></span></button>
+        </div>
+        <!--TABLE-->
+        <table class="table-wrapper">
+            <thead>
+                <th>CPF</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Ações</th>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="clientes.js"></script>
+
+</body>
+
+</html>
