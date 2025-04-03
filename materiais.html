@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materiais</title>
+    <link rel="stylesheet" href="materiais.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body onload="fetchClientes()">
+
+        <!--MODAL MENU-->
+    <div class="screen-wrapper" id="screen-wrapper">
+        <div class="modal-wrapper">
+            <h1>Adicionar Material</h1>
+            <text class="modal-desc">Preencha as informações e clique em Adicionar</text>
+            <div class="form-wrapper">
+                <form>
+                    <label for="id-material">ID Material</label><br>
+                    <input type="text" name="id-material" placeholder="001"><br>
+                    <label for="name">Nome</label><br>
+                    <input type="text" name="name" placeholder="Cimento Votoran de 50Kg"><br>
+                    <label for="descricao">Descrição</label><br>
+                    <textarea id="descricao" name="descricao" rows="4" cols="30" placeholder="Cimento Votoran de 50Kg, ideal para concreto, assentamento e reboco, garantindo resistência e durabilidade."></textarea><br>
+                    <label for="valor-unitario">valor Unitario</label><br>
+                    <input type="text" name="tel" placeholder="R$49,99"><br>
+                    <button type="submit" id="addmaterialButton">Adicionar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+        <!--NAVBAR-->
+     <nav>
+        <ul>
+            <a class="nav-link" href="clientes.html">Clientes</a>
+            <text class="nav-divider">/</text>
+            <a class="nav-link nav-active" href="materiais.html">Materiais</a>
+            <text class="nav-divider">/</text>
+            <a class="nav-link" href="projetos.html">Projetos</a>
+            <text class="nav-divider">/</text>
+            <a class="nav-link" href="itemprojeto.html">Item Projeto</a>
+        </ul>
+    </nav>
+
+        <!--PAGE CONTENT-->
+     <div class="content-wrapper">
+        <div class="btn-wrapper">
+            <button class="btn-add" id="openModalButton">Adicionar<span><i class="fa-solid fa-plus"
+                        style="color: #fafafa;"></i></span></button>
+            <button class="btn-refresh" id="btn-refresh">Atualizar <span><i class="fa-solid fa-arrows-rotate"
+                        style="color: #fafafa;"></i></span></button>
+        </div>
+
+        <!--TABLE-->
+        <table class="table-wrapper">
+            <thead>
+                <th>ID Material</th>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Valor Unitario</th>
+                <th>Ações</th>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="materiais.js"></script>
+
+</body>
+
+</html>
