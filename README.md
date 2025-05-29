@@ -1,4 +1,8 @@
 ```
+npm install express cors mysql2
+```
+
+```
 const app = express();
 const port = 3000;
 app.use(cors());
