@@ -1,3 +1,4 @@
+```
 const app = express();
 const port = 3000;
 app.use(cors());
@@ -9,10 +10,12 @@ const conexao = mysql.createConnection({
     password: 'root',
     database: 'crud_app'
 })
+```
 
 
 -----
 
+```
 CREATE TABLE IF NOT EXISTS clientes (
 	ID INT NOT NULL AUTO_INCREMENT,
     Nome VARCHAR(255),
@@ -38,3 +41,4 @@ CREATE TABLE IF NOT EXISTS projetos (
 	PRIMARY KEY (IDP),
 	FOREIGN KEY (ID) REFERENCES clientes(ID)
 );
+```
